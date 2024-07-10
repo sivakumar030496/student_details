@@ -1,0 +1,19 @@
+<html>
+<head>
+   <title>Registraton Page</title>
+
+</head>
+<body>
+<center>
+    <h1 align="center">WELCOME TO REGISTRATION</h1><hr/><br/><br/>
+    <u><h2>Register Here</h2></u><br/>
+<form method="POST" action="/register/">
+    {%csrf_token%}
+    <table border="1">
+    {{form.as_table}}
+    </table><br/><br/>
+     <button type="submit">Register</button><br>
+</form>
+</center>
+</body>
+</html>

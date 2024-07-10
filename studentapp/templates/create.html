@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>create form</title>
+</head>
+<center>
+<body>
+<h1>Create Student details here</h1><hr/><hr/>
+<div>
+<form method="POST" action="/create/">
+    <table id="table">
+       {% csrf_token %}
+       {{form.as_table}}
+    </table>
+  <button type="submit">Submit</button>
+
+</form>
+</div>
+
+</body>
+ </center>
+</html>

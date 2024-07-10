@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>update form</title>
+
+</head>
+<center>
+<body>
+<h1>Update Student details here</h1><hr/><hr/>
+<div>
+<form method="POST" action="/update/{{id}}/">
+    <table id="table">
+       {% csrf_token %}
+       {{form.as_table}}
+    </table>
+  <button type="submit">Update</button>
+
+</form>
+</div>
+
+</body>
+ </center>
+</html>

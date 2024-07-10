@@ -1,0 +1,51 @@
+<html>
+<head>
+</head>
+<body>
+<center>
+    {% if user.is_authenticated %}
+    <h2> Welcome  {{user.username}} </h2>
+    {% endif %}
+
+STUDENTS DETAILS<br><br>
+    <table border = "1px">
+        <thead>
+        <th> Id </th>
+
+        <th> Name </th>
+        <th> Group</th>
+        <th> Mobile </th>
+        <th> Email </th>
+        <th> Address </th>
+        <th> Gender </th>
+        <th> Country</th>
+        <th>Subject</th>
+        <th> Marks_percentage </th>
+
+        </thead>
+        {% for i in std_data %}
+        <tr>
+            <td> {{i.id}}</td>
+            <td> {{i.name}}</td>
+            <td> {{i.group}}</td>
+            <td> {{i.mobile}} </td>
+            <td> {{i.email}} </td>
+            <td> {{i.address}} </td>
+            <td> {{i.gender}} </td>
+            <td> {{i.country}} </td>
+            <td>{{i.subject}}</td>
+            <td> {{i.marks_percentage}} </td>
+            <td> <a href = '/edit/{{i.id}}'> edit </a> </td>
+            <td> <a href = '/delete/{{i.id}}'> delete </a> </td>
+ </tr>
+    {% endfor %}
+      </table><br><br>
+
+        <a href="/logout"><button type="button">LOGOUT</button></a><br/><br/>
+        <a href="/create/"><button type="button">CREATE</button></a>
+
+
+</center>
+</body>
+
+</html>
